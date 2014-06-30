@@ -100,8 +100,8 @@ keystone.set('nav', {
 });
 
 //cloudinary image hosting
-keystone.set('cloudinary config', { cloud_name: 'dselpjy32', api_key: '223238576661181', api_secret: 'Gj0Fw7eHEs8mTaV3zO_X7V7oHi8' });
-
+//keystone.set('cloudinary config', { cloud_name: 'dselpjy32', api_key: '223238576661181', api_secret: 'Gj0Fw7eHEs8mTaV3zO_X7V7oHi8' });
+keystone.set('cloudinary config', 'cloudinary://223238576661181:Gj0Fw7eHEs8mTaV3zO_X7V7oHi8@dselpjy32' );
 // Start Keystone to connect to your database and initialise the web server
 
 keystone.start();
