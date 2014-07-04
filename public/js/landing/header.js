@@ -33,8 +33,6 @@ $(function() {
 	$(".scroll").click(function(event){
 		event.preventDefault();
 		$('.scroll').removeClass('active');
-		console.log('this', $(this))
-		console.log('thisis', this)
 		$(this).addClass('active');
 		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
 	});
