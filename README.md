@@ -1,5 +1,5 @@
 To add a page
--A view, a js file, a models.js, an app.get route in index.js, and add the route in the nav bar
+-A view, a js file in the views, a models.js, an app.get route in routes/index.js, and add the route in the nav bar if needed.
 
 
 -Light deployment rundown:
@@ -7,4 +7,9 @@ To add a page
   `heroku apps:rename yourName`
   `heroku addons:add mongolab:sandbox`
   `git commit "commit message" `
-  `git push heroku master'
+  `git push heroku master`
+
+  views to add
+    about
+    events
+    get involved
