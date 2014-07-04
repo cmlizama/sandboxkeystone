@@ -1,4 +1,5 @@
-var keystone = require('keystone');
+var keystone = require('keystone'),
+  async = require('async');
 
 exports = module.exports = function(req, res) {
   
@@ -7,9 +8,36 @@ exports = module.exports = function(req, res) {
   
   // locals.section is used to set the currently selected
   // item in the header navigation.
-  locals.section = 'home';
-  
-  // Render the view
-  view.render('members');
+  locals.section = 'members';
+
+
+  //load the members
+
+      var Members = keystone.list('Members');
+      // var view, etc. as in the existing screens
+      view.on('init', function(next) {
+        Members.model.find().exec(function(err, members) {
+          locals.members = members;
+          next();
+        });
+      });
+
+      view.render('members');
+
+
+
+
   
 };
+
+  // Load other posts
+  // view.on('init', function(next) {
+    
+  //   var q = keystone.list('Post').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit('4');
+    
+  //   q.exec(function(err, results) {
+  //     locals.data.posts = results;
+  //     next(err);
+  //   });
+    
+  // });
