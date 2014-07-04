@@ -17,14 +17,44 @@ $(function() {
 		var windowCenterY=($(window).height()/2);
 		$('.story-slide .downlink, .back-to-top').css('left',windowCenterX-33.5);
 	}
+
+	var monitorScrollTop = function () {
+		var windowHeight = $(window).height();
+		var scrollTop = $(window).scrollTop();
+		if (scrollTop >= windowHeight) {
+			$('#header').addClass('in');
+			$('.bullet-nav').addClass('in');
+		} else if (scrollTop < windowHeight) {
+			$('#header').removeClass('in');
+			$('.bullet-nav').removeClass('in');
+		}
+	}
+
+	$(".scroll").click(function(event){
+		event.preventDefault();
+		$('.scroll').removeClass('active');
+		console.log('this', $(this))
+		console.log('thisis', this)
+		$(this).addClass('active');
+		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+	});
+
 	setHeight();
 	setCenter();
+	monitorScrollTop();
 
 
 	$(window).resize(function(){
 		setHeight();
 		setCenter();
+		monitorScrollTop();
 	});
+
+	$(window).scroll(function(){
+		monitorScrollTop();
+	});
+
+
 
 	// $('.home-page').css('opacity',1);
 	// $('.intro-logo').fadeIn(500)
