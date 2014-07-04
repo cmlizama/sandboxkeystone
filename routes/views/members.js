@@ -19,12 +19,10 @@ exports = module.exports = function(req, res) {
         Members.model.find().exec(function(err, members) {
           locals.members = members;
           next();
-          console.log(members);
         });
       });
 
       view.render('members');
-      console.log('members' + locals) //<- data did not reach here
 
 
 
