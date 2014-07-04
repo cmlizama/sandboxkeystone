@@ -93,16 +93,10 @@ keystone.set('email tests', require('./routes/emails'));
 
 keystone.set('nav', {
 	'posts': ['posts', 'post-categories'],
-	'galleries': 'galleries',
 	'enquiries': 'enquiries',
 	'users': 'users',
 	'members': 'members'
 });
 
-//cloudinary image hosting
-//keystone.set('cloudinary config', { cloud_name: 'huoev16ij', api_key: '817428363487862', api_secret: 'LYfPLXlVDPFWd_7kX2rinq7dXbM' });
-keystone.set('cloudinary config', 'cloudinary://223238576661181:Gj0Fw7eHEs8mTaV3zO_X7V7oHi8@dselpjy32' );
-
-// Start Keystone to connect to your database and initialise the web server
 
 keystone.start();
