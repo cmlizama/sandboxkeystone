@@ -66,10 +66,11 @@ html
 		//- Bullet Nav
 		nav.bullet-nav.fade
 			//- a(href="#splash").bullet.scroll#bullet-splash
-			each member in members
-				a(href='#' + member._id).bullet.scroll(class='bullet-'+member.index)
+			if members
+				each member in members
+					a(href='#' + member._id).bullet.scroll(class='bullet-'+member.index)
 		//- BODY
-		#body
+		#body(class='#{section}')
 
 			//- NOTE:
 			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
