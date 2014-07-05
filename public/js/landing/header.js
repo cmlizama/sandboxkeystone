@@ -1,11 +1,5 @@
 $(function() {
-	// var $bodyContainer = $('#body');
-	// var setBodyHeight = function () {
-	// 	$windowHeight = $(window).height();
-	// 	$bodyContainer.css({'height':$windowHeight});
-	// }
-	// setBodyHeight();
-
+	
 	var slides=$('.slide');
 
 	var scrollMap = ['splash','beautiful-barley', 'born-and-dyed', 'cherry-tree', 'chubby-bunny', 'mighty-axe', 'racing-heart', 'south-paw'];
@@ -41,7 +35,7 @@ $(function() {
 		var applyActive = function() {
 			$('.scroll').removeClass('active');
 			var slideNumber = findSlideNumber();
-			$('#bullet-'+ scrollMap[slideNumber]).addClass('active')
+			$('.bullet-'+ slideNumber).addClass('active')
 		}
 		applyActive();
 	}

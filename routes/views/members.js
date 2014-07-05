@@ -12,22 +12,17 @@ exports = module.exports = function(req, res) {
 
 
   //load the members
+  var Members = keystone.list('Members');
+  // var view, etc. as in the existing screens
+  view.on('init', function(next) {
+    Members.model.find().exec(function(err, members) {
+      locals.members = members;
+      next();
+    });
+  });
 
-      var Members = keystone.list('Members');
-      // var view, etc. as in the existing screens
-      view.on('init', function(next) {
-        Members.model.find().exec(function(err, members) {
-          locals.members = members;
-          next();
-        });
-      });
+  view.render('members');
 
-      view.render('members');
-
-
-
-
-  
 };
 
   // Load other posts

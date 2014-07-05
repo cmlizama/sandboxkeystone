@@ -66,13 +66,8 @@ html
 		//- Bullet Nav
 		nav.bullet-nav.fade
 			//- a(href="#splash").bullet.scroll#bullet-splash
-			a(href="#beautiful-barley").bullet.scroll#bullet-beautiful-barley
-			a(href="#born-and-dyed").bullet.scroll#bullet-born-and-dyed
-			a(href="#cherry-tree").bullet.scroll#bullet-cherry-tree
-			a(href="#chubby-bunny").bullet.scroll#bullet-chubby-bunny
-			a(href="#mighty-axe").bullet.scroll#bullet-mighty-axe
-			a(href="#racing-heart").bullet.scroll#bullet-racing-heart
-			a(href="#south-paw").bullet.scroll#bullet-south-paw
+			each member in members
+				a(href='#' + member._id).bullet.scroll(class='bullet-'+member.index)
 		//- BODY
 		#body
 

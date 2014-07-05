@@ -9,7 +9,8 @@ Members.add({
   name: {type: String, required: true},
   bio: {type: Types.Textarea},
   site: {type: Types.Url},
-  image: { type: Types.CloudinaryImage }
+  image: { type: Types.CloudinaryImage },
+  color: {type: Types.Color}
 
 });
 
