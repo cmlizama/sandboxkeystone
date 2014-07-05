@@ -2,8 +2,6 @@ $(function() {
 
 	var slides=$('.slide');
 
-	var scrollMap = ['splash','beautiful-barley', 'born-and-dyed', 'cherry-tree', 'chubby-bunny', 'mighty-axe', 'racing-heart', 'south-paw'];
-
 	var setHeight = function (){
 		var windowHeight=$(window).height();
 		$(slides).height(windowHeight);
