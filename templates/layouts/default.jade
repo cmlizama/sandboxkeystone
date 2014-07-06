@@ -38,7 +38,7 @@ html
 	body
 
 		//- HEADER
-		#header.fade: .container
+		#header.fade.in: .container
 
 			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
 			//- ... or completely change this header to suit your design.
@@ -68,7 +68,7 @@ html
 			//- a(href="#splash").bullet.scroll#bullet-splash
 			if members
 				each member in members
-					a(href='#' + member._id).bullet.scroll(class='bullet-'+member.index)
+					a(href='#' + member._id, class='bullet scroll bullet-'+member.index)
 		//- BODY
 		#body(class='#{section}')
 
