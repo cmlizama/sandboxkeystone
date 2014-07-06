@@ -1,8 +1,6 @@
 $(function() {
-	
-	var slides=$('.slide');
 
-	var scrollMap = ['splash','beautiful-barley', 'born-and-dyed', 'cherry-tree', 'chubby-bunny', 'mighty-axe', 'racing-heart', 'south-paw'];
+	var slides=$('.slide');
 
 	var setHeight = function (){
 		var windowHeight=$(window).height();
@@ -18,13 +16,25 @@ $(function() {
 	var monitorScrollTop = function () {
 		var windowHeight = $(window).height();
 		var scrollTop = $(window).scrollTop();
-		if (scrollTop >= windowHeight) {
-			$('#header').addClass('in');
-			$('.bullet-nav').addClass('in');
-		} else if (scrollTop < windowHeight) {
-			$('#header').removeClass('in');
-			$('.bullet-nav').removeClass('in');
+
+		var bodyIsHome = $('#body').hasClass('home');
+		var $header = $('#header'),
+			$bulletNav = $('.bullet-nav');
+		if (bodyIsHome){
+			if (scrollTop >= windowHeight) {
+				$header.addClass('in');
+				$bulletNav.addClass('in');
+			} else if (scrollTop < windowHeight) {
+				$header.removeClass('in');
+				$bulletNav.removeClass('in');
+			}
+		} else if (!bodyIsHome){
+			$header.css({'opacity': 1});
+			$header.addClass('in');
+			$bulletNav.css({'opacity': 0});
+			$bulletNav.removeClass('in');
 		}
+
 		var findSlideNumber = function () {
 			if (scrollTop !== 0) {
 				return Math.floor( scrollTop / windowHeight );
