@@ -1,0 +1,5 @@
+div#membersDropdown
+    each member in members
+        .member
+            img(src='#{member.image.url}')
+            div #{member.name}

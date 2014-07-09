@@ -1,0 +1,26 @@
+#membersDropdown{
+	height:0px;
+	width: 100%;
+	display: block;
+	-webkit-transition: height .3s ease-out;
+	-moz-transition: height .3s ease-out;
+	-o-transition: height .3s ease-out;
+	transition: height .3s ease-out;
+}
+#members{
+	cursor: pointer;
+}
+#header{
+	z-index: 200;
+}
+
+.member{
+	margin: 10px;
+	display: inline-block;
+	img {
+		border: 3px solid white;
+		&:hover, &:active{
+			border-color: @sandbox-seafoam-light;
+		}
+	}
+}
