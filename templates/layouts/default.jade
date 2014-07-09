@@ -55,7 +55,10 @@ html
 					.collapse.navbar-collapse
 						ul.nav.navbar-nav.navbar-left
 							each link in navLinks
-								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+								if link.key == 'members'
+									li.show-dropdown.member-link(data-toggle='collapse', data-target='.member-grid'): a= link.label
+								else
+									li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 						ul.nav.navbar-nav.navbar-right
 							if user
 								if user.canAccessKeystone
@@ -63,6 +66,7 @@ html
 								li: a(href='/keystone/signout') Sign Out
 							else
 								li: a(href='/keystone/signin') Sign In
+			include membersLayout
 		//- Bullet Nav
 		nav.bullet-nav.fade
 			//- a(href="#splash").bullet.scroll#bullet-splash
@@ -70,6 +74,7 @@ html
 				each member in members
 					a(href='#' + member._id, class='bullet scroll bullet-'+member.index)
 		//- BODY
+
 		#body(class='#{section}')
 
 			//- NOTE:
@@ -111,6 +116,7 @@ html
 
 		//- Add scripts that are globally required by your site here.
 		script(src='/js/landing/header.js')
+		script(src='/js/members/dropdown-menu.js')
 
 		//- Include template-specific javascript files by extending the js block
 		block js
