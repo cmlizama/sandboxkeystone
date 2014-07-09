@@ -1,13 +1,12 @@
 #membersDropdown{
 	height:0px;
 	width: 100%;
-	display: block;
 	-webkit-transition: height .3s ease-out;
 	-moz-transition: height .3s ease-out;
 	-o-transition: height .3s ease-out;
 	transition: height .3s ease-out;
 }
-#members{
+.member-link{
 	cursor: pointer;
 }
 #header{
@@ -17,10 +16,29 @@
 .member{
 	margin: 10px;
 	display: inline-block;
+	cursor: pointer;
+	.widths(25%,22px);
+	@media (max-width: @screen-xs-min) {
+	    .widths(50%,22px);
+	  }
 	img {
+		width: 100%;
+		height: 100%;
 		border: 3px solid white;
-		&:hover, &:active{
-			border-color: @sandbox-seafoam-light;
-		}
+		margin-bottom: 5px;
+		.fadeBorder(.2s);
+	}
+	.name{
+		color: white;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: center;
+		.fadeText(.2s);
+	}
+	&:hover img, &:active img{
+		border-color: @sandbox-seafoam-light;
+	}
+	&:hover .name, &:active .name{
+		color: @sandbox-seafoam-light;
 	}
 }

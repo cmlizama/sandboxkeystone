@@ -1,5 +1,5 @@
-div#membersDropdown
+div#membersDropdown.dropdown.member-grid.top.collapse
     each member in members
-        .member
+        .member(class="#{member._id}")
             img(src='#{member.image.url}')
-            div #{member.name}
+            div.name #{member.name}

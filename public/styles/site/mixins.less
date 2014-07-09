@@ -1,0 +1,22 @@
+.widths(@width,@marginSize) {
+
+  width: calc(@width~" - "@marginSize);
+  width: -moz-calc(@width~" - "@marginSize);
+  width: -webkit-calc(@width~" - "@marginSize);
+  width: -o-calc(@width~" - "@marginSize);
+}
+
+.fadeText(@duration){
+  -webkit-transition: color @duration linear 0s;
+  -moz-transition: color @duration linear 0s;
+  -ms-transition: color @duration linear 0s;
+  -o-transition: color @duration linear 0s;
+  transition: color @duration linear 0s;
+}
+.fadeBorder(@duration){
+  -webkit-transition: border-color @duration linear 0s;
+  -moz-transition: border-color @duration linear 0s;
+  -ms-transition: border-color @duration linear 0s;
+  -o-transition: border-color @duration linear 0s;
+  transition: border-color @duration linear 0s;
+}
