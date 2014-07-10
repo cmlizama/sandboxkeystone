@@ -39,19 +39,6 @@ exports.initLocals = function(req, res, next) {
 };
 
 /**
-	Make sponsors universally available
-*/
-
-// exports.loadMembers = function(req, res, next) {
-// 	var locals = res.locals;
-// 	keystone.list('Members').model.find().exec(function(err, members) {
-// 		if (err) return next(err);
-// 		locals.members = members;
-// 		next();
-// 	});
-// }
-
-/**
 	Fetches and clears the flashMessages before a view is rendered
 */
 
