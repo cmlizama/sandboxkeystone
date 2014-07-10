@@ -44,7 +44,7 @@ exports.initLocals = function(req, res, next) {
 
 exports.loadMembers = function(req, res, next) {
 	
-	keystone.list('Members').model.find().exec(function(err, members) {
+	keystone.list('Members').model.find().sort('name').exec(function(err, members) {
 		if (err) return next(err);
 		req.members = members;
 		res.locals.members = members;
