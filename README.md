@@ -24,4 +24,11 @@
     about
     events
     get involved
+    apply
+
+## to do
+	alphabetize members bullet nav and main views
+	add text to home page over member images
+	li: a.fa.fa-facebook(href="https://sandboxcenter.eventbrite.com", target="_blank")
+
 
