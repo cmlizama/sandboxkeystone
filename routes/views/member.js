@@ -26,8 +26,6 @@ exports = module.exports = function(req, res) {
         }
       });
       locals.members = members;
-      // console.log('memberData',memberData)
-      // locals.member = memberData;
 
       next();
     });
@@ -36,15 +34,3 @@ exports = module.exports = function(req, res) {
   view.render('member');
 
 };
-
-  // Load other posts
-  // view.on('init', function(next) {
-
-  //   var q = keystone.list('Post').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit('4');
-
-  //   q.exec(function(err, results) {
-  //     locals.data.posts = results;
-  //     next(err);
-  //   });
-
-  // });
