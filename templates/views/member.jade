@@ -1,8 +1,9 @@
 extends ../layouts/default
 
 block content
-    .container.member-wrapper(style="background-color:#{member.color}")
-        h1.member-name #{member.name}
-        div.bio Bio:
-            p #{member.bio}
-        img.member-image(src='#{member.image.url}')
+    if member
+        .container.member-wrapper(style="background-color:#{member.color}")
+            h1.member-name #{member.name}
+            div.bio Bio:
+                p #{member.bio}
+            img.member-image(src='#{member.image.url}')
