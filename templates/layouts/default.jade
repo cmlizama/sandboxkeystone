@@ -58,6 +58,7 @@ html
 							each link in navLinks
 								if link.key == 'members'
 									li.show-dropdown.member-link(data-toggle='collapse', data-target='.member-grid'): a= link.label
+								else if link.key == 'home'
 								else
 									li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 						ul.nav.navbar-nav.navbar-right
@@ -69,7 +70,8 @@ html
 								li: a(href='/keystone/signout') Sign Out
 							else
 								li: a(href='/keystone/signin') Sign In
-			include membersLayout
+			if members
+				include membersLayout
 		//- Bullet Nav
 		nav.bullet-nav.fade
 			//- a(href="#splash").bullet.scroll#bullet-splash
