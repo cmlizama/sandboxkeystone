@@ -39,7 +39,7 @@ exports.initLocals = function(req, res, next) {
 };
 
 /**
-	Make sponsors universally available
+	Make members universally available
 */
 
 exports.loadMembers = function(req, res, next) {
