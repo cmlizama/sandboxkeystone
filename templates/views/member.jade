@@ -1,0 +1,12 @@
+extends ../layouts/default
+
+block intro
+  .container
+    h1 This Member
+
+block content
+  .container
+    p Name: #{member.name}
+    p Bio: #{member.bio}
+    p Site: #{member.site}
+    img(src='#{member.image.url}', width='#{member.image.width}', height='#{member.image.height}')
