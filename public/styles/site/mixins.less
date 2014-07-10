@@ -20,3 +20,18 @@
   -o-transition: border-color @duration linear 0s;
   transition: border-color @duration linear 0s;
 }
+
+.fontSize(@xs,@sm,@md,@lg){
+  @media (min-width: @screen-xs-min) {
+      font-size: @xs;
+  }
+  @media (min-width: @screen-sm-min) {
+      font-size: @sm;
+  }
+  @media (min-width: @screen-md-min) {
+      font-size: @md;
+  }
+  @media (min-width: @screen-lg-min) {
+      font-size: @lg;
+  }
+}

@@ -1,8 +1,8 @@
 extends ../layouts/default
 
 block content
-  .container
-    p Name: #{member.name}
-    p Bio: #{member.bio}
-    p Site: #{member.site}
-    img(src='#{member.image.url}', width='#{member.image.width}', height='#{member.image.height}')
+    .container.member-wrapper(style="background-color:#{member.color}")
+    h1.member-name #{member.name}
+    div.bio Bio:
+        p #{member.bio}
+    img.member-image(src='#{member.image.url}')
