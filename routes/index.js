@@ -26,7 +26,6 @@ var _ = require('underscore'),
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
-keystone.pre('render', middleware.loadMembers);
 
 // Import Route Controllers
 var routes = {
@@ -41,8 +40,8 @@ exports = module.exports = function(app) {
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.all('/contact', routes.views.contact);
-	app.get('/members', routes.views.members);
-	app.get('/members/:member', routes.views.member);
+	// app.get('/members', routes.views.members);
+	app.get('/:member', routes.views.member);
 	app.get('/events', routes.views.events);
 	app.get('/about', routes.views.about);
 	app.get('/getInvolved', routes.views.getInvolved);

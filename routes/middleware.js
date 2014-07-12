@@ -39,21 +39,6 @@ exports.initLocals = function(req, res, next) {
 };
 
 /**
-	Make members universally available
-*/
-
-exports.loadMembers = function(req, res, next) {
-
-	keystone.list('Members').model.find().sort('name').exec(function(err, members) {
-		if (err) return next(err);
-		req.members = members;
-		res.locals.members = members;
-		next();
-	});
-
-}
-
-/**
 	Fetches and clears the flashMessages before a view is rendered
 */
 
