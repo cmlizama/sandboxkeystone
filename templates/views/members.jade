@@ -5,9 +5,9 @@ block intro
     h1 Our members
 
 block content
-  .container
-    each member in members
-      p Name: #{member.name}
-      p Bio: #{member.bio}
-      p Site: #{member.site}
-      img(src='#{member.image.url}', width='#{member.image.width}', height='#{member.image.height}') 
+	.container
+		each member in members
+			p Name: #{member.name}
+			p Bio: #{member.bio}
+			p Site: #{member.site}
+			img(src='#{member.image.url}', width='#{member.image.width}', height='#{member.image.height}')

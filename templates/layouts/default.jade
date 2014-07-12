@@ -14,8 +14,9 @@ html
 
 		//- Customise the stylesheet for your site by editing /public/styles/site.less
 		//- All .less files will be automatically compiled and minified in production.
-
+		link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", rel="stylesheet")
 		link(href="/styles/site.min.css", rel="stylesheet")
+
 
 		//- This file provides the default styling for the KeystoneJS Content Editor
 		if user && user.canAccessKeystone
@@ -57,16 +58,20 @@ html
 							each link in navLinks
 								if link.key == 'members'
 									li.show-dropdown.member-link(data-toggle='collapse', data-target='.member-grid'): a= link.label
+								else if link.key == 'home'
 								else
 									li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 						ul.nav.navbar-nav.navbar-right
+							li: a.fa.fa-twitter(href="https://twitter.com/sandboxcenter", target="_blank")
+							li: a.fa.fa-facebook(href="https://facebook.com/sandboxcenter", target="_blank")
 							if user
 								if user.canAccessKeystone
 									li: a(href='/keystone') Open Keystone
 								li: a(href='/keystone/signout') Sign Out
 							else
 								li: a(href='/keystone/signin') Sign In
-			include membersLayout
+			if members
+				include membersLayout
 		//- Bullet Nav
 		nav.bullet-nav.fade
 			//- a(href="#splash").bullet.scroll#bullet-splash
