@@ -21,8 +21,59 @@
 		padding: 0px;
 	}
 	.slide{
+		position: relative;
 		&#splash{
 			background-image: url('/images/wood_wall_5.jpg');
+		}
+		.member-name{
+			text-align: center;
+			.fontSize(24px,32px,40px,48px);
+			text-transform: uppercase;
+			color: white;
+			top:20%;
+			position: absolute;
+			width: 100%;
+		}
+		.to-next{
+			color: white;
+			text-align: center;
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+			height: 75px;
+			cursor: pointer;
+			&.1, &.8{
+				background-color: @sandbox-blue;
+				border: 1px solid @sandbox-blue;
+			}
+			&.2, &.9{
+				background-color: @sandbox-forest-green;
+				border: 1px solid @sandbox-forest-green;
+			}
+			&.3, &.10{
+				background-color: @sandbox-seafoam-light;
+				border: 1px solid @sandbox-seafoam-light;
+			}
+			&.4, &.11{
+				background-color: @sandbox-pumpkin;
+				border: 1px solid @sandbox-pumpkin;
+			}
+			&.5, &.12{
+				background-color: @sandbox-blood-orange;
+				border: 1px solid @sandbox-blood-orange;
+			}
+			&.6, &.13{
+				background-color: @sandbox-olive;
+				border: 1px solid @sandbox-olive;
+			}
+			&.7, &.14{
+				background-color: @sandbox-carrot;
+				border: 1px solid @sandbox-carrot;
+			}
+			.text{
+				text-align: center;
+				.fontSize(16px,22px,28px,34px);
+			}
 		}
 	}
 }

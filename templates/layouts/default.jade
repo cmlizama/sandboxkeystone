@@ -77,7 +77,7 @@ html
 			//- a(href="#splash").bullet.scroll#bullet-splash
 			if members
 				each member in members
-					a(href='#' + member._id, class='bullet scroll bullet-'+member.index)
+					a(href='#' + member._id, class='bullet scroll bullet-'+member.index, data-index= member.index)
 		//- BODY
 
 		#body(class='#{section}')
