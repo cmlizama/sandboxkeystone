@@ -55,6 +55,19 @@ $(function() {
 		$(this).addClass('active');
 		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
 	});
+	$(".to-next .text").click(function(event){
+		event.preventDefault();
+		var data = $(this).data();
+		var nextBullet = $('.scroll[data-index="' + (data.index+1)+'"]');
+		$('.scroll').removeClass('active');
+		$(nextBullet).addClass('active');
+		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+	});
+	$(".to-top").on('click',function(event){
+		event.preventDefault();
+		$('html,body').animate({scrollTop:0}, 500);
+		$('.scroll').removeClass('active');
+	});
 
 	setHeight();
 	setCenter();

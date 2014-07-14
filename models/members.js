@@ -13,7 +13,7 @@ Members.add({
   link_to_eventbrite: {type: Types.Url},
   link_to_instagram: {type: Types.Url},
   link_to_pinterest: {type: Types.Url},
-  image: { type: Types.CloudinaryImage },
+  image: { type: Types.CloudinaryImage},
   color: {type: Types.Color}
 
 });

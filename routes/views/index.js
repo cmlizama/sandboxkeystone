@@ -12,11 +12,20 @@ exports = module.exports = function(req, res) {
 
   //load the members
   var Members = keystone.list('Members');
+  console.log(Members)
   // var view, etc. as in the existing screens
   view.on('init', function(next) {
     Members.model.find().exec(function(err, members) {
+      console.log(members)
       for (var i = members.length - 1; i >= 0; i--) {
       	members[i].index = i+1;
+        var nextIndex = i+1;
+        if (nextIndex == members.length){
+          members[i].nextId = members[i]._id;
+        } else {
+          members[i].nextId = members[nextIndex]._id;
+        }
+
       };
       locals.members = members;
 
