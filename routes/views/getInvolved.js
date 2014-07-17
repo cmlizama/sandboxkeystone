@@ -14,7 +14,7 @@ exports = module.exports = function(req, res) {
 	var Members = keystone.list('Members');
 	// var view, etc. as in the existing screens
 	view.on('init', function(next) {
-	    Members.model.find().exec(function(err, members) {
+	    Members.model.find().sort('name').exec(function(err, members) {
 	    	locals.members = members;
 		    next();
 	    });

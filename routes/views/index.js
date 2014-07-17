@@ -15,7 +15,7 @@ exports = module.exports = function(req, res) {
   console.log(Members)
   // var view, etc. as in the existing screens
   view.on('init', function(next) {
-    Members.model.find().exec(function(err, members) {
+    Members.model.find().sort('name').exec(function(err, members) {
       console.log(members)
       for (var i = members.length - 1; i >= 0; i--) {
       	members[i].index = i+1;
