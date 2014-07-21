@@ -5,7 +5,8 @@
 require('dotenv').load();
 
 // Require keystone
-var keystone = require('keystone');
+var keystone = require('keystone'),
+	request = require('request');
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
@@ -93,7 +94,6 @@ keystone.set('email tests', require('./routes/emails'));
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
-	'posts': ['posts', 'post-categories'],
 	'enquiries': 'enquiries',
 	'users': 'users',
 	'members': 'members'
@@ -101,3 +101,4 @@ keystone.set('nav', {
 
 
 keystone.start();
+
