@@ -9,6 +9,16 @@ exports = module.exports = function(req, res) {
   // item in the header navigation.
   locals.section = 'about';
 
+  //load 'about' data
+  var About = keystone.list('About');
+  // var view, etc. as in the existing screens
+  view.on('init', function(next) {
+      About.model.find().exec(function(err, about) {
+        locals.about = about;
+        next();
+      });
+  });
+
 	//load the members
 	var Members = keystone.list('Members');
 	// var view, etc. as in the existing screens

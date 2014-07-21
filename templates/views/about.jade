@@ -2,8 +2,12 @@ extends ../layouts/default
     
 block intro
   .container
-    h1 About Sandbox
+    h1 Sandbox
 
 block content
   .container
-    p yo
+    each entry in about
+      p #{entry.bio}
+      p #{entry.email}
+      p #{entry.phone_Number}
+      p #{entry.address}

@@ -4,7 +4,10 @@ var keystone = require('keystone'),
 var About = new keystone.List('About');
 
 About.add({
-  bio: {type: Types.Textarea}
+  bio: {type: Types.Textarea},
+  email: {type: Types.Email},
+  phone_Number: {type: Types.Text},
+  address: {type: Types.Textarea}
 });
 
 
