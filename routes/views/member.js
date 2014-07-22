@@ -30,7 +30,7 @@ exports = module.exports = function(req, res) {
       next();
     });
   });
-  console.log('member js file');
+  //console.log('member js file');
 
   view.render('member');
 

@@ -28,7 +28,7 @@ exports = module.exports = function(req, res) {
 		    next();
 	    });
 	});
-  console.log('about view/*.js');
+  //console.log('about view/*.js');
 
   // Render the view
   view.render('about');

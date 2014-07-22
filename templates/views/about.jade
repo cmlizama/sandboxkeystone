@@ -7,7 +7,11 @@ block intro
 block content
   .container
     each entry in about
-      p #{entry.bio}
-      p #{entry.email}
-      p #{entry.phone_Number}
-      p #{entry.address}
+      div.aboutPageBio 
+        p #{entry.bio}
+      div.aboutPageEmail
+        p #{entry.email}
+      div.aboutPagePhoneNumber
+        p #{entry.phone_Number}
+      div.aboutPageAddress
+        p #{entry.address}
