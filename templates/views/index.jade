@@ -11,5 +11,6 @@ block content
 				if members.length == member.index
 				else
 					div(class="to-next #{member.index}")
-						a.text(data-index="#{member.index}", href="#"+member.nextId) TO NEXT
+						each asset in assets
+							img.nextArrow(src='#{asset.nextArrow.url}', data-index="#{member.index}", href="#"+member.nextId)
 				a.text.to-top BACK TO TOP

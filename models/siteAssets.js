@@ -7,6 +7,7 @@ var SiteAssets = new keystone.List('SiteAssets', {
 });
 
 SiteAssets.add({
+  name: {type: String, required: true},
   nextArrow: { type: Types.CloudinaryImage}
 });
 
