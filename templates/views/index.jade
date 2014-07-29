@@ -6,6 +6,8 @@ block content
 		each member in members
 			.slide(id='#{member._id}', style='background-image: url(#{member.image.url})')
 				a.member-name(href="/#{member._id}") #{member.name}
+				div.member-shortBio
+					a #{member.shortBio}
 				if members.length == member.index
 				else
 					div(class="to-next #{member.index}")

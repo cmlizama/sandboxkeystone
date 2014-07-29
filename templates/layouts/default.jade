@@ -16,7 +16,7 @@ html
 		//- All .less files will be automatically compiled and minified in production.
 		link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", rel="stylesheet")
 		link(href="/styles/site.min.css", rel="stylesheet")
-
+		link(href="http://fonts.googleapis.com/css?family=Lato|Raleway", rel="stylesheet")
 
 		//- This file provides the default styling for the KeystoneJS Content Editor
 		if user && user.canAccessKeystone
@@ -99,8 +99,13 @@ html
 
 		//- FOOTER
 		.container: #footer
-			p Sandbox Center©
-
+			div 
+				| Sandbox Center©
+				div.attribution
+					| Web dev by 
+					a(href='https://github.com/gemfarmer') Brian Hedberg 
+					| and 
+					a(href="https://github.com/cmlizama") Chris Lizama
 
 
 		//- JAVASCRIPT
