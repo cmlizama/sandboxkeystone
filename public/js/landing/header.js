@@ -1,11 +1,12 @@
 $(function() {
 
 	var slides=$('.slide');
-
+	console.log('page hit')
 	var setHeight = function (){
 		var windowHeight=$(window).height();
 		$(slides).height(windowHeight);
 		$(slides).width('auto');
+
 	}
 	var setCenter = function (){
 		var windowCenterX=($(window).width()/2);

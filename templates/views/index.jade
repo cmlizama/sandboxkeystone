@@ -3,6 +3,9 @@ extends ../layouts/default
 block content
 	.container
 		#splash.slide
+			#left-promo.promo
+			#logo-center
+			#right-promo.promo
 		each member in members
 			.slide(id='#{member._id}', style='background-image: url(#{member.image.url})')
 				a.member-name(href="/#{member._id}") #{member.name}
