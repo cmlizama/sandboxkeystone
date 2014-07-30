@@ -33,7 +33,6 @@ exports = module.exports = function(req, res) {
     });
   });
 
-
   //console.log('index js file');
 
 	// Render the view
