@@ -22,15 +22,15 @@ $(function() {
 			$bulletNav = $('.bullet-nav');
 		if (bodyIsHome){
 			if (scrollTop >= windowHeight) {
-				$header.addClass('in');
+				//$header.addClass('in');
 				$bulletNav.addClass('in');
 			} else if (scrollTop < windowHeight) {
-				$header.removeClass('in');
+				//$header.removeClass('in');
 				$bulletNav.removeClass('in');
 			}
 		} else if (!bodyIsHome){
-			$header.css({'opacity': 1});
-			$header.addClass('in');
+			//$header.css({'opacity': 1});
+			//$header.addClass('in');
 			$bulletNav.css({'opacity': 0});
 			$bulletNav.removeClass('in');
 		}
