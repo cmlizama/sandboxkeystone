@@ -56,7 +56,7 @@ $(function() {
 		$(this).addClass('active');
 		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
 	});
-	$(".to-next .text").click(function(event){
+	$(".to-next a").click(function(event){
 		event.preventDefault();
 		var data = $(this).data();
 		var nextBullet = $('.scroll[data-index="' + (data.index+1)+'"]');
