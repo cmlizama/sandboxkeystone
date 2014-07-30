@@ -6,8 +6,12 @@ block content
 		each member in members
 			.slide(id='#{member._id}', style='background-image: url(#{member.image.url})')
 				a.member-name(href="/#{member._id}") #{member.name}
+				div.member-shortBio
+					a #{member.shortBio}
 				if members.length == member.index
 				else
 					div(class="to-next #{member.index}")
-						a.text(data-index="#{member.index}", href="#"+member.nextId) TO NEXT
+						each asset in assets
+							a(data-index="#{member.index}", href="#"+member.nextId)
+								img.nextArrow(src='#{asset.nextArrow.url}')
 				a.text.to-top BACK TO TOP

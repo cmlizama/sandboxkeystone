@@ -8,6 +8,7 @@ var Members = new keystone.List('Members', {
 Members.add({
   name: {type: String, required: true},
   bio: {type: Types.Textarea},
+  shortBio: {type: String},
   link_to_twitter: {type: Types.Url},
   link_to_facebook:{type: Types.Url},
   link_to_eventbrite: {type: Types.Url},
