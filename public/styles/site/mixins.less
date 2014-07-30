@@ -22,16 +22,16 @@
 }
 
 .fontSize(@xs,@sm,@md,@lg){
-  @media (min-width: @screen-xs-min) {
+  @media (min-width: 320px) and (max-width: 480px) {
       font-size: @xs;
   }
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: 480px) {
       font-size: @sm;
   }
-  @media (min-width: @screen-md-min) {
+  @media (min-width: 768px) {
       font-size: @md;
   }
-  @media (min-width: @screen-lg-min) {
+  @media (min-width: 1200px) {
       font-size: @lg;
   }
 }
