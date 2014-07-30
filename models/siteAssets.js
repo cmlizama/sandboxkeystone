@@ -8,7 +8,10 @@ var SiteAssets = new keystone.List('SiteAssets', {
 
 SiteAssets.add({
   name: {type: String, required: true},
-  nextArrow: { type: Types.CloudinaryImage}
+  nextArrow: { type: Types.CloudinaryImage},
+  promoLeft: { type: Types.CloudinaryImage},
+  promoRight: { type: Types.CloudinaryImage},
+  mainLogo: { type: Types.CloudinaryImage}
 });
 
 SiteAssets.register();
