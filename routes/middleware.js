@@ -71,3 +71,13 @@ exports.requireUser = function(req, res, next) {
 	}
 
 };
+
+exports.loadAssets = function(req, res, next) {
+
+	keystone.list('SiteAssets').model.find().exec(function(err, assets) {
+		if (err) return next(err);
+		req.assets = assets;
+		res.locals.assets = assets;
+		next();
+	});
+};
