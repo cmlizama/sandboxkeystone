@@ -12,5 +12,6 @@ block content
 				else
 					div(class="to-next #{member.index}")
 						each asset in assets
-							img.nextArrow(src='#{asset.nextArrow.url}', data-index="#{member.index}", href="#"+member.nextId)
+							a(data-index="#{member.index}", href="#"+member.nextId)
+								img.nextArrow(src='#{asset.nextArrow.url}')
 				a.text.to-top BACK TO TOP
