@@ -38,7 +38,7 @@ exports = module.exports = function(req, res) {
   view.on('init', function(next) {
     SiteAssets.model.find().exec(function(err, siteAssets){
       locals.siteAssets = siteAssets;
-      console.log(siteAssets);
+      //console.log(siteAssets);
       next();
     });
   });
