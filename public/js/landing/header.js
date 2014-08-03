@@ -76,7 +76,7 @@ $(function() {
 	var toTopOfPage = function(){
 		var scrollTop = $(window).scrollTop();
 		var windowHeight = $(window).height();
-		var pagePlace = Math.floor(scrollTop/windowHeight);
+		var pagePlace = Math.round(scrollTop/windowHeight);
 		var flooredPlace = windowHeight* pagePlace;
 		if (pagePlace == 0){
 			var nextBullet = $('.scroll[data-index="splash"]');
