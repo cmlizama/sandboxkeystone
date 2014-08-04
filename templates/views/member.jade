@@ -4,15 +4,24 @@ block content
     if member
         .container.member-wrapper(style="background-color:#{member.color}")
             h1.member-name #{member.name}
-            div.bio Bio:
-                p #{member.bio}
-            div.link_to_twitter link_to_twitter:
-                p #{member.link_to_twitter}
-            div.link_to_eventbrite link_to_eventbrite:
-                p #{member.link_to_eventbrite}
-            div.link_to_facebook link_to_facebook:
-                p #{member.link_to_facebook}
-            div.link_to_pinterest link_to_pinterest:
-                p #{member.link_to_pinterest}
+            div.row
+                div.col-xs-4
+                    div.bio Bio:
+                        p #{member.bio}
+                div.col-xs-4
+                    img.member-image(src='#{member.image.url}')
+                div.col-xs-4
+                    div.socialMedia
+                        div.link_to_twitter link_to_twitter:
+                            p #{member.link_to_twitter}
+                        div.link_to_eventbrite link_to_eventbrite:
+                            p #{member.link_to_eventbrite}
+                        div.link_to_facebook link_to_facebook:
+                            p #{member.link_to_facebook}
+                        div.link_to_pinterest link_to_pinterest:
+                            p #{member.link_to_pinterest}
 
-            img.member-image(src='#{member.image.url}')
+
+
+
+            
