@@ -8,18 +8,21 @@ block content
                 div.col-xs-4
                     div.bio Bio:
                         p #{member.bio}
+                    div.member-location
+                        p Location
                 div.col-xs-4
                     img.member-image(src='#{member.image.url}')
-                div.col-xs-4
-                    div.socialMedia
-                        div.link_to_twitter link_to_twitter:
-                            p #{member.link_to_twitter}
-                        div.link_to_eventbrite link_to_eventbrite:
-                            p #{member.link_to_eventbrite}
-                        div.link_to_facebook link_to_facebook:
-                            p #{member.link_to_facebook}
-                        div.link_to_pinterest link_to_pinterest:
-                            p #{member.link_to_pinterest}
+                div.col-xs-4.socialMedia
+                    div.link_to_twitter link_to_twitter:
+                        p #{member.link_to_twitter}
+                    div.link_to_eventbrite link_to_eventbrite:
+                        p #{member.link_to_eventbrite}
+                    div.link_to_facebook link_to_facebook:
+                        p #{member.link_to_facebook}
+                    div.link_to_pinterest link_to_pinterest:
+                        p #{member.link_to_pinterest}
+                    div.member-contact
+                        p Contact
 
 
 
