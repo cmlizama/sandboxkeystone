@@ -1,11 +1,22 @@
 $(function() {
 
 	var slides=$('.slide');
+	var slideNonMain = $('.slide-non-main');
+	var footer = $('.footer');
+	var header = $('#header');
 	console.log('page hit')
 	var setHeight = function (){
 		var windowHeight=$(window).height();
 		$(slides).height(windowHeight);
 		$(slides).width('auto');
+
+	}
+	var setHeightNonMain = function (){
+		var windowHeight=$(window).height();
+		var headerHeight = header.height();
+		var footerHeight = footer.height();
+		$(slideNonMain).height(windowHeight-headerHeight-footerHeight);
+		$(slideNonMain).width('auto');
 
 	}
 	var setCenter = function (){
@@ -79,7 +90,6 @@ $(function() {
 		var pagePlace = Math.round(scrollTop/windowHeight);
 		var flooredPlace = windowHeight* pagePlace;
 		if (pagePlace == 0){
-			var nextBullet = $('.scroll[data-index="splash"]');
 			$('.scroll').removeClass('active');
 			$('html,body').animate({scrollTop:0}, 500);
 		} else {
@@ -98,12 +108,14 @@ $(function() {
 	});
 
 	setHeight();
+	setHeightNonMain();
 	setCenter();
 	monitorScrollTop();
 
 
 	$(window).resize(function(){
 		setHeight();
+		setHeightNonMain();
 		setCenter();
 		monitorScrollTop();
 		debounceTopOfPage();

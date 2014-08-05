@@ -5,26 +5,35 @@ block content
         .container.member-wrapper(style="background-color:#{member.color}")
             h1.member-name #{member.name}
             div.row
-                div.col-xs-4
-                    div.bio Bio:
+                div.left-container.col-xs-4
+                    div.member-bio
+                        h4
+                            b About
                         p #{member.bio}
                     div.member-location
-                        p Location
+                        h4
+                            b Location
+                        p #{member.location}
                 div.col-xs-4
                     img.member-image(src='#{member.image.url}')
-                div.col-xs-4.socialMedia
-                    div.link_to_twitter link_to_twitter:
-                        p #{member.link_to_twitter}
-                    div.link_to_eventbrite link_to_eventbrite:
-                        p #{member.link_to_eventbrite}
-                    div.link_to_facebook link_to_facebook:
-                        p #{member.link_to_facebook}
-                    div.link_to_pinterest link_to_pinterest:
-                        p #{member.link_to_pinterest}
+                div.col-xs-4.right-container
+                    div.member-products
+                        h4
+                            b Products
+                        p #{member.products}
                     div.member-contact
-                        p Contact
+                        h4
+                            b Contact
+                        p Please follow our social media accounts at:
+                        p
+                            a.link_to_twitter(href="#{member.link_to_twitter}") Twitter
+                        p
+                            a.link_to_eventbrite(href="#{member.link_to_eventbrite}") Eventbrite
+                        p
+                            a.link_to_facebook(href="#{member.link_to_facebook}") Facebook
+                        p
+                            a.link_to_pinterest(href="#{member.link_to_pinterest}") Pinterest
 
 
 
 
-            

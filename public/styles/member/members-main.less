@@ -2,6 +2,9 @@
 	padding-top:@header-height;
 	.member-wrapper{
 		background-color: @sandbox-silver;
+		font-family: 'Raleway';
+		font-weight: 800;
+		cursor: default;
 		.member-name{
 			text-align: center;
 			color: @sandbox-red;
@@ -10,13 +13,17 @@
 			font-family: Oswald;
 			.fontSize(16px, 24px, 32px, 40px);
 		}
-		.bio{
-
+		.member-bio, .member-products{
+			padding-bottom: 50px;
 		}
+
 		.member-image{
 			width:25%;
 			height: auto;
 		}
+	}
+	&.slide{
+
 	}
 }
 
@@ -40,3 +47,7 @@
 	width: 100% !important;
 }
 
+.left-container,.right-container{
+	padding-left: 50px;
+	padding-right: 50px;
+}

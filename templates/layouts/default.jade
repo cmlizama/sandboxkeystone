@@ -79,7 +79,7 @@ html
 					a(href='#' + member._id, class='bullet scroll bullet-'+member.index, data-index= member.index)
 		//- BODY
 
-		#body(class='#{section}')
+		#body(class='#{section} slide-non-main')
 
 			//- NOTE:
 			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
@@ -129,5 +129,6 @@ html
 		script(src='/js/members/dropdown-menu.js')
 		script(src='/js/landing/promo-blocks.js')
 		script(src='/js/landing/nextArrow.js')
+		script(src='/js/landing/member.js')
 		//- Include template-specific javascript files by extending the js block
 		block js
