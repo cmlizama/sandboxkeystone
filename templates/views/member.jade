@@ -4,7 +4,7 @@ block content
     if member
         .container.member-wrapper(style="background-color:#{member.color}")
             h1.member-name #{member.name}
-            div.row
+            div.row(style="margin-left: 0px; margin-right: 0px; ")
                 div.left-container.col-xs-4
                     div.member-bio
                         h4
@@ -15,7 +15,7 @@ block content
                             b Location
                         p #{member.location}
                 div.col-xs-4
-                    img.member-image(src='#{member.image.url}')
+                    img.member-image(src='#{member.logo.url}')
                 div.col-xs-4.right-container
                     div.member-products
                         h4
@@ -33,6 +33,13 @@ block content
                             a.link_to_facebook(href="#{member.link_to_facebook}") Facebook
                         p
                             a.link_to_pinterest(href="#{member.link_to_pinterest}") Pinterest
+            div.slideshow
+                .slideshow-container
+                    img.slideshow-image(src='#{member.slideshowImage1.url}')
+                    img.slideshow-image(src='#{member.slideshowImage2.url}')
+                    img.slideshow-image(src='#{member.slideshowImage3.url}')
+                    img.slideshow-image(src='#{member.slideshowImage4.url}')
+                    img.slideshow-image(src='#{member.slideshowImage5.url}')
 
 
 

@@ -15,8 +15,11 @@ $(function() {
 		var windowHeight=$(window).height();
 		var headerHeight = header.height();
 		var footerHeight = footer.height();
-		$(slideNonMain).height(windowHeight-headerHeight-footerHeight);
-		$(slideNonMain).width('auto');
+		var idealHeight = windowHeight-headerHeight-footerHeight;
+		if (slideNonMain.height() < idealHeight){
+			$(slideNonMain).height(idealHeight);
+		}
+		$(slideNonMain).width('100%');
 
 	}
 	var setCenter = function (){

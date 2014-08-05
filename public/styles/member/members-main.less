@@ -22,7 +22,24 @@
 			height: auto;
 		}
 	}
-	&.slide{
+	.slideshow{
+		height: auto ;
+		background-color: red;
+		position: absolute;
+		overflow: hidden;
+
+		.slideshow-container{
+			width: 3000px;
+			-webkit-transition: 300ms ease;
+			transform: translate3d(0px, 0px, 0px);
+			.slideshow-image{
+				float: left;
+				.widths(50%, 20px);
+				height: auto;
+				margin-left:10px;
+				margin-right: 10px;
+			}
+		}
 
 	}
 }

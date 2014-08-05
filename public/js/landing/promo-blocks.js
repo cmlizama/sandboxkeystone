@@ -19,8 +19,8 @@ $(function() {
 	var positionLogo = function(){
 		var windowHeight=$(window).height(),
 			windowWidth=$(window).width(),
-			logoWidth = windowWidth/3,
-			logoHeight = logoWidth / 2,
+			logoWidth = windowWidth*.45,
+			logoHeight = logoWidth / (4/3),
 			logoLeft = (windowWidth/2)-(logoWidth/2),
 			logoTop = (windowHeight/2)-(logoHeight/2) +25;
 		$('#logo-center').css({'height': logoHeight, 'width': logoWidth, 'left':logoLeft, 'top':logoTop});
