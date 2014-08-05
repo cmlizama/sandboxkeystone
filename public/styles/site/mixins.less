@@ -6,6 +6,14 @@
   width: -o-calc(@width~" - "@marginSize);
 }
 
+.leftMargin(@totalWidth,@divWidth) {
+
+  left: calc(~"("@totalWidth~"/2) - ("@divWidth~"/2)");
+  left: -moz-calc(~"("@totalWidth~"/2) - "@divWidth~"/2)");
+  left: -webkit-calc(~"("@totalWidth~"/2) - "@divWidth~"/2)");
+  left: -o-calc(~"("@totalWidth~"/2) - "@divWidth~"/2)");
+}
+
 .fadeText(@duration){
   -webkit-transition: color @duration linear 0s;
   -moz-transition: color @duration linear 0s;

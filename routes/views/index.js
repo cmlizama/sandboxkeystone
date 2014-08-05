@@ -32,17 +32,6 @@ exports = module.exports = function(req, res) {
       next();
     });
   });
-
-  //load siteAssets
-  var SiteAssets = keystone.list('SiteAssets');
-  view.on('init', function(next) {
-    SiteAssets.model.find().exec(function(err, assets){
-      locals.assets = assets;
-      //console.log(assets);
-      next();
-    });
-  });
-
   //console.log('index js file');
 
 	// Render the view

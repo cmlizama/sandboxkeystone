@@ -3,6 +3,13 @@ extends ../layouts/default
 block content
 	.container
 		#splash.slide
+			img#left-promo.promo(src='#{assets[0].promoLeft.url}')
+			img#logo-center(src='#{assets[0].mainLogo.url}')
+			img#right-promo.promo(src='#{assets[0].promoRight.url}')
+			div(class="to-next splash}")
+					a(data-index="splash", href="#")
+						img.nextArrow.default-arrow(src='#{assets[0].nextArrowDefault.url}')
+						img.nextArrow.hover-arrow(src='#{assets[0].nextArrowHover.url}')
 		each member in members
 			.slide(id='#{member._id}', style='background-image: url(#{member.image.url})')
 				a.member-name(href="/#{member._id}") #{member.name}
@@ -11,7 +18,7 @@ block content
 				if members.length == member.index
 				else
 					div(class="to-next #{member.index}")
-						each asset in assets
-							a(data-index="#{member.index}", href="#"+member.nextId)
-								img.nextArrow(src='#{asset.nextArrow.url}')
+						a(data-index="#{member.index}", href="#"+member.nextId)
+							img.nextArrow.default-arrow(src='#{assets[0].nextArrowDefault.url}')
+							img.nextArrow.hover-arrow(src='#{assets[0].nextArrowHover.url}')
 				a.text.to-top BACK TO TOP
