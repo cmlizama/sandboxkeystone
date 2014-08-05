@@ -8,7 +8,7 @@ $(function() {
 		$('.promo').css({'height': promoHeight, 'width': promoWidth});
 		var setPromoMargins = function(){
 			var promoMarginTop = (windowHeight/2)-(promoHeight/2) + 25,
-				promoMarginSide =windowWidth/12;
+				promoMarginSide =windowWidth/20;
 			$('#left-promo').css({'margin-left': promoMarginSide, 'margin-top': promoMarginTop});
 			$('#right-promo').css({'margin-right': promoMarginSide, 'margin-top': promoMarginTop});
 		}
@@ -19,7 +19,7 @@ $(function() {
 	var positionLogo = function(){
 		var windowHeight=$(window).height(),
 			windowWidth=$(window).width(),
-			logoWidth = windowWidth*.45,
+			logoWidth = windowWidth*.55,
 			logoHeight = logoWidth / (4/3),
 			logoLeft = (windowWidth/2)-(logoWidth/2),
 			logoTop = (windowHeight/2)-(logoHeight/2) +25;
