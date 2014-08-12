@@ -4,7 +4,12 @@ block content
 	.container
 		#splash(class="slide #{assets[0].homepageBackground}")
 			img#left-promo.promo(src='#{assets[0].promoLeft.url}')
+<<<<<<< HEAD
 			img#logo-center(src='#{assets[0].mainLogo.url}')
+=======
+			a(href="/about/sandbox")
+				img#logo-center(src='#{assets[0].mainLogo.url}')
+>>>>>>> FETCH_HEAD
 			img#right-promo.promo(src='#{assets[0].promoRight.url}')
 
 		each member in members
