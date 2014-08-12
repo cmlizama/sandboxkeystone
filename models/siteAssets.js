@@ -13,7 +13,7 @@ SiteAssets.add({
   promoLeft: { type: Types.CloudinaryImage},
   promoRight: { type: Types.CloudinaryImage},
   mainLogo: { type: Types.CloudinaryImage},
-  hompageBackground: { type: Types.Select, options: 'barn, wood, third' }
+  homepageBackground: { type: Types.Select, options: 'barn, wood, third' }
 });
 
 SiteAssets.register();
