@@ -15,7 +15,7 @@ SiteAssets.add({
   promoRight: { type: Types.CloudinaryImage},
   promRightUrl: { type: Types.CloudinaryImage},
   mainLogo: { type: Types.CloudinaryImage},
-  homepageBackground: { type: Types.Select, options: 'barn, wood, third' }
+  homepageBackground: { type: Types.Select, options: 'barn, wood, homepage' }
 });
 
 SiteAssets.register();
