@@ -1,17 +1,15 @@
 extends ../layouts/default
-    
-block intro
-  .container
-    h1 Sandbox
 
 block content
   .container
-    each entry in about
-      div.aboutPageBio 
-        p #{entry.bio}
-      div.aboutPageEmail
-        p #{entry.email}
-      div.aboutPagePhoneNumber
-        p #{entry.phone_Number}
-      div.aboutPageAddress
-        p #{entry.address}
+    div.aboutPage
+      h1 Sandbox
+      each entry in about
+        div.aboutPageBio 
+          p #{entry.bio}
+        div.aboutPageEmail
+         p #{entry.email}
+        div.aboutPagePhoneNumber
+          p #{entry.phone_Number}
+        div.aboutPageAddress
+          p #{entry.address}
