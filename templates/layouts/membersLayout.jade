@@ -2,4 +2,4 @@ div#membersDropdown.dropdown.member-grid.top.collapse
     each member in members
         a.member(class="#{member._id}" href="/#{member._id}")
             img(src='#{member.image.url}')
-            div.name #{member.name}
+            div.name #{member.shortName}
