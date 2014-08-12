@@ -11,7 +11,9 @@ SiteAssets.add({
   nextArrowDefault: { type: Types.CloudinaryImage},
   nextArrowHover: { type: Types.CloudinaryImage},
   promoLeft: { type: Types.CloudinaryImage},
+  promLeftUrl: { type: Types.CloudinaryImage},
   promoRight: { type: Types.CloudinaryImage},
+  promRightUrl: { type: Types.CloudinaryImage},
   mainLogo: { type: Types.CloudinaryImage},
   homepageBackground: { type: Types.Select, options: 'barn, wood, third' }
 });

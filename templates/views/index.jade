@@ -3,10 +3,12 @@ extends ../layouts/default
 block content
 	.container
 		#splash(class="slide #{assets[0].homepageBackground}")
-			img#left-promo.promo(src='#{assets[0].promoLeft.url}')
+			a(href="#{assets[0].promoLeftUrl}")
+				img#left-promo.promo(src='#{assets[0].promoLeft.url}')
 			a(href="/about/sandbox")
 				img#logo-center(src='#{assets[0].mainLogo.url}')
-			img#right-promo.promo(src='#{assets[0].promoRight.url}')
+			a(href="#{assets[0].promoRightUrl}")
+				img#right-promo.promo(src='#{assets[0].promoRight.url}')
 
 		each member in members
 			.slide(id='#{member._id}', style='background-image: url(#{member.image.url})')
