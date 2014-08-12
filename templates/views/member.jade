@@ -9,7 +9,7 @@ block content
                     div.member-bio
                         h4
                             b About
-                        p #{member.bio}
+                        p.textContent #{member.bio}
                     div.member-location
                         h4
                             b Location
@@ -20,18 +20,18 @@ block content
                     div.member-products
                         h4
                             b Products
-                        p #{member.products}
+                        p.textContent #{member.products}
                     div.member-contact
                         h4
                             b Contact
-                        p Please follow our social media accounts at:
-                        p
+                        p.textContent Please follow our social media accounts at:
+                        p.textContent
                             a.link_to_twitter(href="#{member.link_to_twitter}") Twitter
-                        p
+                        p.textContent
                             a.link_to_eventbrite(href="#{member.link_to_eventbrite}") Eventbrite
-                        p
+                        p.textContent
                             a.link_to_facebook(href="#{member.link_to_facebook}") Facebook
-                        p
+                        p.textContent
                             a.link_to_pinterest(href="#{member.link_to_pinterest}") Pinterest
             div.slideshow
                 .slideshow-container
