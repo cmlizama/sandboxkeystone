@@ -25,6 +25,7 @@ exports = module.exports = function(req, res) {
 
         }
       });
+
       locals.members = members;
 
       next();
