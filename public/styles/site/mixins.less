@@ -5,6 +5,13 @@
   width: -webkit-calc(@width~" - "@marginSize);
   width: -o-calc(@width~" - "@marginSize);
 }
+.lefts(@left,@marginSize) {
+
+  left: calc(@left~" + "@marginSize);
+  left: -moz-calc(@left~" + "@marginSize);
+  left: -webkit-calc(@left~" + "@marginSize);
+  left: -o-calc(@left~" + "@marginSize);
+}
 
 .leftMargin(@totalWidth,@divWidth) {
 
