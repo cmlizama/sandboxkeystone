@@ -19,7 +19,6 @@ Members.add({
   link_to_pinterest: {type: Types.Url},
   image: { type: Types.CloudinaryImage},
   logo: { type: Types.CloudinaryImage},
-  color: {type: Types.Color},
   slideshowImage1: { type: Types.CloudinaryImage},
   slideshowImage2: { type: Types.CloudinaryImage},
   slideshowImage3: { type: Types.CloudinaryImage},
