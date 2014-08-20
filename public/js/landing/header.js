@@ -1,5 +1,5 @@
 $(function() {
-
+	
 	var slides=$('.slide');
 	var slideNonMain = $('.slide-non-main');
 	var footer = $('.footer');
