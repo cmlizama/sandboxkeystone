@@ -3,5 +3,6 @@ extends ../layouts/default
 block content
   .container
     div.eventsPage
-      p Our events are great!
-      p please come to them
+      each event in events
+        h2 #{event.title}
+        p #{event.blurb}

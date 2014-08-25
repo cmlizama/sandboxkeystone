@@ -7,6 +7,16 @@ exports = module.exports = function(req, res) {
 
     //locals.section = 'events';
 
+  //load events listing
+  var Events = keystone.list('Events');
+  //var view, etc. as in the existing screens
+  view.on('init', function(next) {
+    Events.model.find().exec(function(err, events){
+      locals.events = events;
+      next();
+    });
+  });
+
   //load the members
   var Members = keystone.list('Members');
   // var view, etc. as in the existing screens
