@@ -1,5 +1,5 @@
 $(function() {
-	console.log('member')
+	//console.log('member')
 	var resizeTiles = function(){
 		var $slideshowImage = $('.slideshow-image').width() +20;
 

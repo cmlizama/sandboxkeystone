@@ -4,5 +4,13 @@ block content
   .container
     div.eventsPage
       each event in events
-        h2 #{event.title}
-        p #{event.blurb}
+        div.eventContainer.container
+          div.eventName
+            h2 #{event.name}
+          div.eventContent
+            div.eventBlurb
+              p #{event.blurb}
+            div.eventDate
+              p #{event.date}
+            div.eventUrl
+              a(href="#{event.eventbriteLink}") Eventbrite
