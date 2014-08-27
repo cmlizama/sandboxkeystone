@@ -4,8 +4,8 @@ var keystone = require('keystone'),
 var Events = new keystone.List('Events');
 
 Events.add({
-  title: { type: Types.Text},
-  date: {type: Types.Date},
+  name: {type: String, required: true},
+  date: {type: Types.Text},
   blurb: {type: Types.Textarea},
   eventbriteLink:{type: Types.Url},
   image: {type:Types.CloudinaryImage}

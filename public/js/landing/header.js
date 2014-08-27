@@ -4,7 +4,7 @@ $(function() {
 	var slideNonMain = $('.slide-non-main');
 	var footer = $('.footer');
 	var header = $('#header');
-	console.log('page hit')
+	//console.log('page hit')
 	var setHeight = function (){
 		var windowHeight=$(window).height();
 		$(slides).height(windowHeight);
