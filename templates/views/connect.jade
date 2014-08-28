@@ -2,5 +2,15 @@ extends ../layouts/default
 
 block content
   .container
-    div.connectPage
-      p eyy
+    each connect in connectInfo
+      div.connectPage
+        h1 #{connect.pitchLead}
+        div.connectImage
+          img(src='#{connect.connectImage.url}')
+        div.connectPitch
+          p #{connect.pitch}
+        div.connectLinks
+          p
+            a(href='#{connect.newsletterLink') Check out our newsletters!
+          p
+            a(href="#{connect.connectFormLink ") Hit us up if you want to chat about joining
