@@ -1,13 +1,16 @@
 $(function() {
 	//console.log('member')
 	var resizeTiles = function(){
-		var $slideshowImage = $('.slideshow-image').width() +20;
 
 		$('.slideshow-container').width($(window).width());
 		$('.slideshow').height(($(window).width()/2)+40);
-		$('.slideshow-image').height($slideshowImage);
+		$('.slideshow-image').height($('.slideshow-image').width());
+		$('.slideshow-right').css({'top':($('.slideshow-image').width()/2)-15});
+		$('.slideshow-left').css({'top':($('.slideshow-image').width()/2)-15});
 
 	}
+
+
 
 	var getSlideshowPosition = function(){
 		var data = $('.slideshow').attr("data-position")
